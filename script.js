@@ -1,18 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Update footer year
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-link');
 
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        const isOpen = hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
     });
 
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         });
     });
 
