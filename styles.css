@@ -605,3 +605,109 @@ footer p {
         width: 100%;
     }
 }
+
+
+/* ===== PORTFOLIO CONTENT POLISH ===== */
+.section-intro {
+  max-width: 760px;
+  margin: -1.5rem auto 2.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+.status-note {
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: .95rem;
+}
+.status-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: .5rem;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 12px rgba(52, 211, 153, .5);
+}
+.about-text strong { color: var(--text-color); }
+.stat-item { padding: .4rem 0; }
+.skill-card p {
+  color: var(--text-secondary);
+  font-size: .9rem;
+  margin-top: .6rem;
+}
+.skill-icon { color: #60a5fa; }
+.project-label {
+  color: #93c5fd;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  margin-bottom: .7rem;
+}
+.project-card { display: flex; }
+.project-content { width: 100%; }
+.learning-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+.learning-icon {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(59,130,246,.14);
+  color: #93c5fd;
+  font-size: 2rem;
+}
+.learning-card h3 { font-size: 1.4rem; margin-bottom: .8rem; }
+.learning-card p { color: var(--text-secondary); margin-bottom: 1rem; }
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #93c5fd;
+  font-weight: 600;
+}
+.text-link:hover { color: #c4b5fd; }
+.learning-card .small-note { font-size: .85rem; margin-top: 1rem; margin-bottom: 0; }
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: center;
+}
+.contact-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-width: 180px;
+}
+.info-content p { color: var(--text-secondary); }
+footer { position: relative; z-index: 1; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 4px;
+}
+@media (max-width: 768px) {
+  .learning-card { flex-direction: column; padding: 1.5rem; }
+  .contact-actions { align-items: stretch; }
+  .contact-actions .btn { width: 100%; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
